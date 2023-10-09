@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://cju0wbcnb2og1"]
+
+[ext_resource type="Script" path="res://Control.cs" id="1_pg08g"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pg08g")
+
+[node name="CountVowelsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 391.0
+offset_right = 896.0
+offset_bottom = 515.0
+text = "Count Vowels"
+
+[node name="InputText" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 105.0
+offset_right = 936.0
+offset_bottom = 230.0
+text = "Hello World!"
+placeholder_text = "Write something here"
+
+[node name="ResultLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 212.0
+offset_top = 297.0
+offset_right = 776.0
+offset_bottom = 362.0
+
+[connection signal="pressed" from="CountVowelsButton" to="." method="_on_button_pressed"]
